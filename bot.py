@@ -10,13 +10,14 @@ while True:
     data = response.json()
     btc = data[0]
     eth = data[1]
-    usdt = data[2]
+    link = data[20]
     bnb = data[3]
-    ltc = data[16]
-    avax = data[17]
-    matic = data[7]
+    #LTC is an annoying coin as it keeps getting outranked by DAI which is right behind it in market-cap. 
+    ltc = data[13]
+    avax = data[16]
+    matic = data[9]
     uni = data[18]
-    sol = data[11]
+    sol = data[10]
     dot = data[12]
     #BTC json data parse
     image_value = btc.get('image')
@@ -38,16 +39,16 @@ while True:
     name_value_eth = eth.get('name')
     total_supply_value_eth = eth.get('total_supply')
     total_volume_value_eth = eth.get('total_volume')
-    #USDT json data parse
-    image_value_usdt = usdt.get('image')
-    ath_value_usdt = usdt.get('ath')
-    atl_value_usdt= usdt.get('atl')
-    cur_price_value_usdt = usdt.get('current_price')
-    market_cap_value_usdt = usdt.get('market_cap')
-    market_cap_rank_value_usdt = usdt.get('market_cap_rank')
-    name_value_usdt = usdt.get('name')
-    total_supply_value_usdt = usdt.get('total_supply')
-    total_volume_value_usdt = usdt.get('total_volume')
+    #LINK json data parse
+    image_value_link = link.get('image')
+    ath_value_link = link.get('ath')
+    atl_value_link= link.get('atl')
+    cur_price_value_link = link.get('current_price')
+    market_cap_value_link = link.get('market_cap')
+    market_cap_rank_value_link = link.get('market_cap_rank')
+    name_value_link = link.get('name')
+    total_supply_value_link = link.get('total_supply')
+    total_volume_value_link = link.get('total_volume')
     #BNB json data parse
     image_value_bnb = bnb.get('image')
     ath_value_bnb = bnb.get('ath')
@@ -121,7 +122,7 @@ while True:
 
     alpha = {'image': image_value, 'ath': ath_value, 'atl': atl_value, 'current_price': cur_price_value, 'market_cap': market_cap_value, 'market_cap_rank': market_cap_rank_value, 'name': name_value, 'total_supply': total_supply_value, 'total_volume': total_volume_value,
                 'imageEth': image_value_eth, 'athEth': ath_value_eth, 'atlEth': atl_value_eth, 'current_priceEth': cur_price_value_eth, 'market_capEth': market_cap_value_eth, 'market_cap_rankEth': market_cap_rank_value_eth, 'nameEth': name_value_eth, 'total_supplyEth': total_supply_value_eth, 'total_volumeEth': total_volume_value_eth,
-                'imageUsdt': image_value_usdt, 'athUsdt': ath_value_usdt, 'atlUsdt': atl_value_usdt, 'current_priceUsdt': cur_price_value_usdt, 'market_capUsdt': market_cap_value_usdt, 'market_cap_rankUsdt': market_cap_rank_value_usdt, 'nameUsdt': name_value_usdt, 'total_supplyUsdt': total_supply_value_usdt, 'total_volumeUsdt': total_volume_value_usdt,
+                'imageLink': image_value_link, 'athLink': ath_value_link, 'atlUsdt': atl_value_link, 'current_priceLink': cur_price_value_link, 'market_capLink': market_cap_value_link, 'market_cap_rankLink': market_cap_rank_value_link, 'nameLink': name_value_link, 'total_supplyLink': total_supply_value_link, 'total_volumeLink': total_volume_value_link,
                 'imageBnb': image_value_bnb, 'athBnb': ath_value_bnb, 'atlBnb': atl_value_bnb, 'current_priceBnb': cur_price_value_bnb, 'market_capBnb': market_cap_value_bnb, 'market_cap_rankBnb': market_cap_rank_value_bnb, 'nameBnb': name_value_bnb, 'total_supplyBnb': total_supply_value_bnb, 'total_volumeBnb': total_volume_value_bnb,
                 'imageLtc': image_value_ltc, 'athLtc': ath_value_ltc, 'atlLtc': atl_value_ltc, 'current_priceLtc': cur_price_value_ltc, 'market_capLtc': market_cap_value_ltc, 'market_cap_rankLtc': market_cap_rank_value_ltc, 'nameLtc': name_value_ltc, 'total_supplyLtc': total_supply_value_ltc, 'total_volumeLtc': total_volume_value_ltc,
                 'imageAvax': image_value_avax, 'athAvax': ath_value_avax, 'atlAvax': atl_value_avax, 'current_priceAvax': cur_price_value_avax, 'market_capAvax': market_cap_value_avax, 'market_cap_rankAvax': market_cap_rank_value_avax, 'nameAvax': name_value_avax, 'total_supplyAvax': total_supply_value_avax, 'total_volumeAvax': total_volume_value_avax,
