@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-api_url = 'http://127.0.0.1:5000/api/market-coin'
+api_url = 'http://127.0.0.1:5023/api/market-coin'
 
 
 while True:
