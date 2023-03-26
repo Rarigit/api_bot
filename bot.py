@@ -17,7 +17,7 @@ while True:
     avax = data[16]
     matic = data[9]
     uni = data[18]
-    sol = data[10]
+    sol = data[11]
     dot = data[12]
     #BTC json data parse
     image_value = btc.get('image')
